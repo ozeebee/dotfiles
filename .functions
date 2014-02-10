@@ -1,0 +1,14 @@
+# Print working directory after a cd.
+function cd() {
+    if [[ $@ == '-' ]]; then
+        builtin cd "$@" > /dev/null  # We'll handle pwd.
+    else
+        builtin cd "$@"
+    fi
+    echo -e "   ${COLOR_DARK_GRAY}"`pwd`"${COLOR_NC}"
+}
+
+# allow tab rename in iterm2 (usage: > tab newname)
+function tab() { 
+	echo -e "\033];$1\007"
+}

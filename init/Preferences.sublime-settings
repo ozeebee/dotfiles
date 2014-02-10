@@ -1,0 +1,30 @@
+{
+	"tab_size": 4,
+	"translate_tabs_to_spaces": false,
+	"animation_enabled": false,
+	"color_scheme": "Packages/Colorsublime-Themes/Tomorrow_Night_Eighties.tmTheme",
+	"enable_telemetry": false,
+	"font_size": 12,
+	"gutter": true,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"margin": 1,
+	"open_files_in_new_window": false,
+	"phoenix_color_expanded_folder": true,
+	"phoenix_dirty_bottom_bar": false,
+	"phoenix_dirty_bottom_bar_orange": true,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_sidebar_tree_medium": true,
+	"phoenix_solid_current_tab": true,
+	"phoenix_tabs_auto_width": true,
+	"phoenix_tabs_small": true,
+	"scroll_past_end": true,
+	"show_full_path": true,
+	"soda_folder_icons": false,
+	"theme": "Phoenix Dark.sublime-theme",
+	"reveal-on-activate": false
+}
