@@ -46,3 +46,6 @@ alias filepath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'"
 # Java related aliases
 alias java6="export JAVA_HOME=${JAVA6_HOME}; java -version"
 alias java7="export JAVA_HOME=${JAVA7_HOME}; java -version"
+
+# restart airport
+alias restart_airport="sudo ifconfig en0 down; sleep 2; sudo ifconfig en0 up"
