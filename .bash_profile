@@ -37,3 +37,10 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# display current dir in iTerm tab name
+# from: https://gist.github.com/phette23/5270658
+# another useful could be : https://gist.github.com/jstrachan/f960917b4861f30a8a45
+if [ $ITERM_SESSION_ID ]; then
+  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+fi

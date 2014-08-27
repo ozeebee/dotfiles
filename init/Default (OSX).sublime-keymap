@@ -1,5 +1,7 @@
 [
 	{ "keys": ["super+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+	{ "keys": ["ctrl+super+d"], "command": "find_under_expand" },
 	{ "keys": ["super+k"], "command": "find_under_expand_skip" },
-	{ "keys": ["f10"], "command": "reveal_in_side_bar" }
+	{ "keys": ["f10"], "command": "reveal_in_side_bar" },
+	{ "keys": ["super+f7"], "command": "view_in_browser" }
 ]

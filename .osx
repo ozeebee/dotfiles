@@ -703,6 +703,12 @@ cp -r init/Default\ (OSX).sublime-keymap ~/Library/Application\ Support/Sublime\
 # defaults write com.twitter.twitter-mac HideInBackground -bool true
 
 ###############################################################################
+# Automator services                                                           #
+###############################################################################
+
+cp -r init/*.workflow ~/Library/Services
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

@@ -22,6 +22,7 @@
 	"phoenix_tabs_small": true,
 	"reveal-on-activate": false,
 	"scroll_past_end": false,
+	"show_encoding": false,
 	"show_full_path": true,
 	"soda_folder_icons": false,
 	"tab_size": 4,
