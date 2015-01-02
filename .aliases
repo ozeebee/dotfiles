@@ -41,6 +41,7 @@ alias dropboxUpload='~/Dev/Workspaces/AJO/PersoProjects/ozb-dropbox-upload/targe
 alias vdiff="open -a 'Kaleidoscope'"
 alias vzip="open -a betterzip"
 alias edit="${EDITOR}"
+alias httpServer="python -m SimpleHTTPServer 8080"
 
 # show full file path
 alias filepath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'"
