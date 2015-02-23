@@ -1,0 +1,18 @@
+Zsh dot files
+=============
+
+Zsh configuration files.
+
+Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
+
+== Installation
+
+. Install https://github.com/sorin-ionescu/prezto[prezto^]
+. create links to the zsh/prezto conf files in this folder (and replace the ones created by prezto install)
+
+	setopt EXTENDED_GLOB
+	ln -s ~/dotfiles/zsh/zprofile ${ZDOTDIR:-$HOME}/.zprofile
+	ln -s ~/dotfiles/zsh/zshrc ${ZDOTDIR:-$HOME}/.zshrc
+	ln -s ~/dotfiles/zsh/zpreztorc ${ZDOTDIR:-$HOME}/.zpreztorc
+
+. copy the custom prompt function (if any) in ~/.zprezto/modules/prompt

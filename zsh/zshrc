@@ -1,0 +1,58 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Unset AUTO_NAME_DIRS to disable display of variables in path (see module directory)
+unsetopt AUTO_NAME_DIRS
+
+# Aliases
+
+# JDK
+alias jdk7='export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; java -version'
+
+# Sublime text
+alias st="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+alias stt='st .'
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
+
+# OS X: Show/hide hidden files in Finder
+alias show_hidden="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide_hidden="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+# OS X: Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# shortcuts to some of my utils (requires local build)
+#alias jarfinderP='python ~/Dev/Python/Utils/jarfinder.py'
+alias jarfinder='java -cp ~/Dev/Workspaces/AJO/PersoProjects/ozb-jartools/target/scala-2.10/ozb-jartools-dist-0.2.jar org.ozb.utils.jartools.JarFinder'
+alias jargrep='java -cp ~/Dev/Workspaces/AJO/PersoProjects/ozb-jartools/target/scala-2.10/ozb-jartools-dist-0.2.jar org.ozb.utils.jartools.JarGrep'
+alias dropboxUpload='~/Dev/Workspaces/AJO/PersoProjects/ozb-dropbox-upload/target/universal/stage/bin/ozb-dropbox-upload'
+
+# commands to open various tools
+#alias vdiff="open -a 'Araxis Merge'"
+alias vdiff="open -a 'Kaleidoscope'"
+alias vzip="open -a betterzip"
+
+# not needed anymore with zsh, use http-serve instead.
+#alias httpServer="python -m SimpleHTTPServer 8080"
+
+# show full file path (bash)
+#alias filepath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'"
+# show full file path (zsh)
+filepath() { for f in "$@"; do echo ${f}(:A); done }
+
+# OS X: restart airport
+alias restart_airport="sudo ifconfig en0 down; sleep 2; sudo ifconfig en0 up"
+
+# Directory aliases
+alias pprj="cd ~/Dev/Workspaces/AJO/PersoProjects"
+
