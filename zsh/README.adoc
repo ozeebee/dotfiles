@@ -15,4 +15,6 @@ Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
 	ln -s ~/dotfiles/zsh/zshrc ${ZDOTDIR:-$HOME}/.zshrc
 	ln -s ~/dotfiles/zsh/zpreztorc ${ZDOTDIR:-$HOME}/.zpreztorc
 
-. copy the custom prompt function (if any) in ~/.zprezto/modules/prompt
+. copy the custom prompt function (if any) in ~/.zprezto/modules/prompt; Example:
+
+	ln -s ~/dotfiles/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
