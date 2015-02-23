@@ -1,0 +1,7 @@
+{
+  "cmd": [
+    "sh", "-c", "asciidoctor $file && open -a Safari $file_base_name.html"
+  ],
+  "path": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.rbenv/shims",
+  "selector": "text.html.asciidoc"
+}
