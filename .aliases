@@ -47,8 +47,8 @@ alias httpServer="python -m SimpleHTTPServer 8080"
 alias filepath="python -c 'import os,sys;print os.path.realpath(sys.argv[1])'"
 
 # Java related aliases
-alias java6="export JAVA_HOME=${JAVA6_HOME}; java -version"
-alias java7="export JAVA_HOME=${JAVA7_HOME}; java -version"
+alias java6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6); java -version"
+alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7); java -version"
 
 # restart airport
 alias restart_airport="sudo ifconfig en0 down; sleep 2; sudo ifconfig en0 up"
