@@ -1,5 +1,4 @@
-Zsh dot files
-=============
+= Zsh dot files
 
 Zsh configuration files.
 
