@@ -17,3 +17,14 @@ Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
 . copy the custom prompt function (if any) in ~/.zprezto/modules/prompt; Example:
 
 	ln -s ~/dotfiles/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
+
+== Updating Prezto
+
+You can update prezto as documented https://github.com/sorin-ionescu/prezto#updating[here^]
+
+	cd ~/.zprezto
+	git pull && git submodule update --init --recursive
+
+Don't forget to re-link your custom prompt (if any):
+
+	ln -s ~/dotfiles/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
