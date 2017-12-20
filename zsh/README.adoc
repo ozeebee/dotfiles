@@ -16,7 +16,20 @@ Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
 
 . copy the custom prompt function (if any) in ~/.zprezto/modules/prompt; Example:
 
+	# single file
 	ln -s ~/dotfiles/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
+
+	# multiple files
+	setopt EXTENDED_GLOB
+	for promptfile in ~/Projects/Perso/dotfiles/zsh/prompt_functions/*; do
+		ln -s "$promptfile" "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/${promptfile:t}"
+	done
+
+
+== Alternative prompt (theme)
+
+.There are many great themes out there:
+* https://github.com/Chauncey-Garrett/zsh-prompt-garrett/
 
 == Updating Prezto
 

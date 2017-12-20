@@ -16,13 +16,19 @@ unsetopt AUTO_NAME_DIRS
 # Aliases
 
 # JDK
-alias jdk6='export JAVA_HOME=`/usr/libexec/java_home -v 1.6`; java -version'
+#alias jdk6='export JAVA_HOME=`/usr/libexec/java_home -v 1.6`; java -version'
 alias jdk7='export JAVA_HOME=`/usr/libexec/java_home -v 1.7`; java -version'
 alias jdk8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version'
 
 # Sublime text
 alias st="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias stt='st .'
+
+# Go lang (installed with Homebrew)
+#DON'T USE SYMLINK ! export GOROOT=/usr/local/opt/go
+export GOROOT=/usr/local/Cellar/go/1.9/libexec
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/Projects/go
 
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
@@ -37,7 +43,7 @@ alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 #alias jarfinderP='python ~/Dev/Python/Utils/jarfinder.py'
 alias jarfinder='java -cp ~/Dev/Workspaces/AJO/PersoProjects/ozb-jartools/target/scala-2.10/ozb-jartools-dist-0.2.jar org.ozb.utils.jartools.JarFinder'
 alias jargrep='java -cp ~/Dev/Workspaces/AJO/PersoProjects/ozb-jartools/target/scala-2.10/ozb-jartools-dist-0.2.jar org.ozb.utils.jartools.JarGrep'
-alias dropboxUpload='~/Dev/Workspaces/AJO/PersoProjects/ozb-dropbox-upload/target/universal/stage/bin/ozb-dropbox-upload'
+alias dropboxUpload='~/Projects/Perso/ozb-dropbox-upload/target/universal/stage/bin/ozb-dropbox-upload'
 
 # commands to open various tools
 #alias vdiff="open -a 'Araxis Merge'"
@@ -61,4 +67,4 @@ alias pprj="cd ~/Dev/Workspaces/AJO/PersoProjects"
 # WorkingOn service function (see https://www.workingon.co/tools#cli-bash-zsh)
 function workingOn() { noglob curl -X POST --data-urlencode "task=$*" https://api.workingon.co/hooks/incoming?token=dbd0d6c48351a8ab86130333559e5c1466b05f462a3a5663205576b632330cd3 >/dev/null 2>&1 echo "Task sent." }
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
