@@ -26,7 +26,7 @@ alias stt='st .'
 
 # Go lang (installed with Homebrew)
 #DON'T USE SYMLINK ! export GOROOT=/usr/local/opt/go
-export GOROOT=/usr/local/Cellar/go/1.9/libexec
+export GOROOT=/usr/local/Cellar/go/1.11.4/libexec
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/Projects/go
 
