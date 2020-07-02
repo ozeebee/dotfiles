@@ -65,6 +65,7 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 #defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+#defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Expand print panel by default
 #defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
@@ -598,7 +599,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
 	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 # Load new settings before rebuilding the index
 killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume

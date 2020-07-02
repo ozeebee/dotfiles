@@ -9,19 +9,20 @@ Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
 . Install https://github.com/sorin-ionescu/prezto[prezto^]
 . create links to the zsh/prezto conf files in this folder (and replace the ones created by prezto install)
 
+	export DOTFILESDIR=/Users/ajo/Projects/Perso/dotfiles
 	setopt EXTENDED_GLOB
-	ln -s ~/dotfiles/zsh/zprofile ${ZDOTDIR:-$HOME}/.zprofile
-	ln -s ~/dotfiles/zsh/zshrc ${ZDOTDIR:-$HOME}/.zshrc
-	ln -s ~/dotfiles/zsh/zpreztorc ${ZDOTDIR:-$HOME}/.zpreztorc
+	ln -s ${DOTFILESDIR}/zsh/zprofile ${ZDOTDIR:-$HOME}/.zprofile
+	ln -s ${DOTFILESDIR}/zsh/zshrc ${ZDOTDIR:-$HOME}/.zshrc
+	ln -s ${DOTFILESDIR}/zsh/zpreztorc ${ZDOTDIR:-$HOME}/.zpreztorc
 
 . copy the custom prompt function (if any) in ~/.zprezto/modules/prompt; Example:
 
 	# single file
-	ln -s ~/dotfiles/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
+	ln -s ${DOTFILESDIR}/zsh/prompt_functions/prompt_ajo1_setup ~/.zprezto/modules/prompt/functions/prompt_ajo1_setup
 
 	# multiple files
 	setopt EXTENDED_GLOB
-	for promptfile in ~/Projects/Perso/dotfiles/zsh/prompt_functions/*; do
+	for promptfile in ${DOTFILESDIR}/zsh/prompt_functions/*; do
 		ln -s "$promptfile" "${ZDOTDIR:-$HOME}/.zprezto/modules/prompt/functions/${promptfile:t}"
 	done
 
@@ -30,6 +31,36 @@ Requires https://github.com/sorin-ionescu/prezto[prezto^] installation first.
 
 .There are many great themes out there:
 * https://github.com/Chauncey-Garrett/zsh-prompt-garrett/
+
+=== Spaceship prompt
+
+Homepage: https://denysdovhan.com/spaceship-prompt/
+
+.Requirements
+* `zsh` 5.2 or higher
+* Powerline fonts
+
+.Steps to install (with Prezto)
+. clone Prezto contrib: https://github.com/belak/prezto-contrib#usage
+. Enable the contrib-prompt module (before the prompt module)
+. Set zstyle ':prezto:module:prompt' theme 'spaceship' in your .zpreztorc.
+
+== PowerLevel9k prompt
+
+.Links
+* https://medium.com/@oldwestaction/beautifying-your-terminal-with-zsh-prezto-powerlevel9k-9e8de2023046
+* https://github.com/bhilburn/powerlevel9k
+
+.Install Nerd fonts
+	brew tap caskroom/fonts
+	brew cask install font-meslo-nerd-font
+	brew untap caskroom/fonts
+
+Then select the font in iTerm.
+
+Configure `.zshrc` to customize the prompt.
+
+TODO: include code here
 
 == Updating Prezto
 
